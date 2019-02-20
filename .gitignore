@@ -1,0 +1,10 @@
+/.idea/*
+/.git/*
+/node_modules
+/vendor
+*.lock
+/Homestead.yaml
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+/*.zip
