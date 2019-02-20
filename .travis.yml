@@ -2,6 +2,6 @@ install:
   - 'sudo apt-get install git-ftp'
 
 script:
-  - 'git ftp init -vv --disable-epsv --user $FTP_USER --passwd $FTP_PASSWORD "ftps://blockui.io:21/public_html/blocks"'
+  - 'git ftp init -vv --ftp-ssl --disable-epsv --user $FTP_USER --passwd $FTP_PASSWORD "ftps://blockui.io:21/public_html/blocks"'
   #- 'git ftp catchup -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
   #- 'git ftp push -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
