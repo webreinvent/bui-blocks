@@ -1,7 +1,6 @@
 install:
   - 'git clone https://github.com/lavv17/lftp'
   - 'cd lftp'
-  - 'git checkout 4.8.4'
   - 'sudo make install'
 
 script:
