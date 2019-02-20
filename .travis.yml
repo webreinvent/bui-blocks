@@ -1,10 +1,10 @@
 install:
-  - 'git clone https://github.com/git-ftp/git-ftp.git'
-  - 'cd git-ftp'
-  - 'git checkout 1.5.1'
+  - 'git clone https://github.com/lavv17/lftp'
+  - 'cd lftp'
+  - 'git checkout 4.8.4'
   - 'sudo make install'
 
 script:
-  - 'git ftp init -vv --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
+  - 'lftp -e "set ftp:ssl-allow no; mirror --exclude-glob *.psd --exclude-glob *.ai -R ./ "./public_html" -u $FTP_USER,$FTP_PASSWORD "block.io"'
   #- 'git ftp catchup -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
   #- 'git ftp push -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
