@@ -4,7 +4,7 @@ install:
   - 'sudo apt-get install curl'
   - 'cd curl'
   - './buildconf'
-  - './configure --with-ssl'
+  - './configure --with-ssl --with-libssl-prefix=/usr/local/ssl'
   - 'make'
   - 'sudo make install'
   - 'sudo apt-get install git-ftp'
