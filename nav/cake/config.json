@@ -1,0 +1,8 @@
+{
+  "name": "cake",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "both",
+  "block": "nav",
+  "tags": "nav, nav bar, navbar"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "bui-blocks",
+  "version": "1.0.0",
+  "description": "These are the UI Blocks for BlockUI",
+  "main": "index.html",
+  "repository": "git@github.com:webreinvent/bui-blocks.git",
+  "author": "Pradeep Kumar <webreinvent@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
