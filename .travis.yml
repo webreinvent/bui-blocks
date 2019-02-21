@@ -1,5 +1,5 @@
 install:
-  - 'sudo apt-get install curl --with-ssh'
+  - 'sudo apt-get install curl'
   - 'sudo apt-get install git-ftp'
 
 script:
