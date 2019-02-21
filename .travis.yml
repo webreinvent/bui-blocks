@@ -1,5 +1,9 @@
 install:
   - 'sudo apt-get install git-ftp'
+  - 'sudo apt-get install libssl-dev'
+  - './configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu'
+  - 'sudo make'
+  - 'sudo make install'
 
 script:
   - 'git ftp init -vv -k --ftp-ssl --no-certificate-check --user $FTP_USER --passwd $FTP_PASSWORD "sftp://blockui.io:1157/public_html/blocks"'
