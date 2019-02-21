@@ -3,3 +3,4 @@ install:
 
 script:
   - 'lftp -e "set ftp:ssl-allow no; mirror --exclude-glob *.psd --exclude-glob *.ai -R ./ ./public_html/blocks" -u $FTP_USER,$FTP_PASSWORD "sftp://blockui.io:1157"; bye'
+  - 'exit'
