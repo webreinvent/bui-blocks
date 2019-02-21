@@ -1,6 +1,5 @@
 install:
   - 'sudo apt-get update'
-  - 'sudo apt-get install libcurl'
   - 'git clone https://github.com/bagder/curl.git'
   - 'sudo apt-get install curl'
   - 'cd curl'
@@ -12,5 +11,5 @@ install:
 
 script:
   #- 'git ftp init -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
-  - 'git ftp catchup --ftp-ssl --no-certificate-check -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "sftp://blockui.io:1157/public_html/blocks"'
+  - 'git ftp catchup --ftp-ssl --disable-epsv --ftp-pasv --no-certificate-check --user $FTP_USER --passwd $FTP_PASSWORD "sftp://blockui.io:1157/public_html/blocks"'
   #- 'git ftp push -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
