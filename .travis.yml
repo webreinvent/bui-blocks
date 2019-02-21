@@ -1,11 +1,5 @@
 install:
-  - 'sudo apt-get install git-ftp'
-  - 'sudo apt-get install libssl-dev'
-  - './configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu'
-  - 'sudo make'
-  - 'sudo make install'
+  - 'sudo apt-get install lftp'
 
 script:
-  - 'git ftp init -vv -k --ftp-ssl --no-certificate-check --user $FTP_USER --passwd $FTP_PASSWORD "sftp://blockui.io:1157/public_html/blocks"'
-  #- 'git ftp catchup -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
-  #- 'git ftp push -vv --disable-epsv -s --user $FTP_USER --passwd $FTP_PASSWORD "ftp://blockui.io/public_html"'
+  - 'lftp -e "set ftp:ssl-allow no; mirror --exclude-glob *.psd --exclude-glob *.ai -R ./ ./public_html/blocks" -u $FTP_USER,$FTP_PASSWORD "sftp://blockui.io:1157"'
