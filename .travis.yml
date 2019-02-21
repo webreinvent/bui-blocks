@@ -1,5 +1,13 @@
 install:
-  - 'sudo apt-get install curl --with-libssh2'
+  - 'sudo apt-get update'
+  - 'sudo apt-get install libcurl'
+  - 'git clone https://github.com/bagder/curl.git'
+  - 'sudo apt-get install curl'
+  - 'cd curl'
+  - './buildconf'
+  - './configure --with-ssl'
+  - 'make'
+  - 'sudo make install'
   - 'sudo apt-get install git-ftp'
 
 script:
