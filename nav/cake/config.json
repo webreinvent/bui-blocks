@@ -1,5 +1,7 @@
 {
   "name": "cake",
+  "description": "This is normal block ui",
+  "thumbnail": "thumbnail.jpg",
   "framework": "bootstrap",
   "trends": "flat",
   "section": "both",
