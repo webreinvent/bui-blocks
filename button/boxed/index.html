@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+<!--#blockui-css#-->
+<style>
+
+.mt-20{ margin-top:20px;}
+
+.btn-12 {
+padding: 20px 40px;
+background: none;
+border: none;
+position: relative;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 3px;
+cursor: pointer; width:100%;
+}
+.btn-12:after, .btn-12:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+border: 2px solid #000;
+-webkit-transition: -webkit-transform 0.2s;
+transition: -webkit-transform 0.2s;
+transition: transform 0.2s;
+transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.btn-12:after {
+-webkit-transform: translate(3px, 3px);
+transform: translate(3px, 3px);
+}
+.btn-12:before {
+-webkit-transform: translate(-3px, -3px);
+transform: translate(-3px, -3px);
+}
+.btn-12:hover:after, .btn-12:hover:before {
+-webkit-transform: translate(0);
+transform: translate(0);
+}
+
+
+/*button 13*/
+.btn-13:hover{cursor: pointer}
+.btn-13 {
+background: transparent; outline: none;
+position: relative;
+border: 2px solid #111;
+padding: 19px 50px;
+overflow: hidden;width:100%;
+}
+
+/*.btn-13:before (attr data-hover)*/
+.btn-13:hover:before{opacity: 1; -webkit-transform: translate(0,0); transform: translate(0,0);}
+.btn-13:before{
+content: attr(data-hover);
+position: absolute;
+top:19px; left: 0;
+width: 100%;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-weight: 800;
+font-size: .8em;
+opacity: 0;
+-webkit-transform: translate(-100%,0);
+transform: translate(-100%,0);
+-webkit-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+/*.btn-13 div (.btn-13 text before hover)*/
+.btn-13:hover div{opacity: 0; -webkit-transform: translate(100%,0); transform: translate(100%,0)}
+.btn-13 div{
+text-transform: uppercase;
+letter-spacing: 3px;
+font-weight: 800;
+font-size: .8em;
+-webkit-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+
+/*button 14*/
+
+.btn-14 {
+position: relative;
+font-size: 13px;
+font-weight: 700;
+line-height: 1.4;
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 4px;
+white-space: nowrap;
+background-color: transparent;
+border: 0;
+cursor: pointer;
+-webkit-transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+color: #DAA25A;
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+margin: 0;
+padding: 19px 50px;
+letter-spacing: 0.3em; width: 100%; justify-content: center;
+}
+.btn-14::after {
+content: '';
+width: 80%;
+left: 50%;
+height: 1px;
+bottom: 0;
+-webkit-transform: translatex(-50%);
+transform: translatex(-50%);
+-webkit-transition: width 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: width 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+display: block;
+position: absolute;
+background: #DAA25A;
+}
+.btn-14 span {
+display: block;
+position: absolute;
+-webkit-transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+width: 100%;
+top: 0;
+left: 0;
+}
+.btn-14 span::before, .btn-14 span::after {
+content: '';
+display: block;
+position: absolute;
+background: #DAA25A;
+-webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9), -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+.btn-14 span:first-child {
+height: 100%;
+}
+.btn-14 span:first-child::before, .btn-14 span:first-child::after {
+width: 1px;
+height: 100%;
+bottom: 0;
+-webkit-transform: scale3d(1, 0, 1);
+transform: scale3d(1, 0, 1);
+-webkit-transform-origin: bottom center;
+transform-origin: bottom center;
+-webkit-transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+}
+.btn-14 span:first-child::before {
+left: 0;
+}
+.btn-14 span:first-child::after {
+right: 0;
+}
+.btn-14 span:last-child {
+width: 100%;
+height: 1px;
+}
+.btn-14 span:last-child::before, .btn-14 span:last-child::after {
+height: 1px;
+width: 100%;
+bottom: 0;
+-webkit-transform: scale3d(0, 1, 1);
+transform: scale3d(0, 1, 1);
+-webkit-transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+}
+.btn-14 span:last-child::before {
+left: 0;
+-webkit-transform-origin: bottom left;
+transform-origin: bottom left;
+}
+.btn-14 span:last-child::after {
+right: 0;
+-webkit-transform-origin: bottom right;
+transform-origin: bottom right;
+}
+.btn-14:hover {
+opacity: 1;
+outline: 0;
+color: #333E48 !important;
+text-decoration: none;
+-webkit-transition: color 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: color 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+/* Positioning */
+}
+.btn-14:hover::after {
+width: 100%;
+background: #232F39;
+-webkit-transition: width 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: width 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+}
+.btn-14:hover span:first-child::before, .btn-14:hover span:first-child::after {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+background: #232F39;
+-webkit-transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.2s;
+}
+.btn-14:hover span:last-child::before, .btn-14:hover span:last-child::after {
+-webkit-transform: scale3d(1, 1, 1);
+transform: scale3d(1, 1, 1);
+background: #232F39;
+-webkit-transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s;
+transition: background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s;
+transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s, background 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0s, -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.4s;
+}
+.btn-14:focus {
+background: #232F39;
+color: white !important;
+-webkit-transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+.btn-14:focus::after {
+opacity: 0;
+}
+
+/*button -15*/
+.btn-15 {
+border: 2px solid #1dce6c;
+color: #1dce6c;
+display: inline-block;
+height: 50px;
+letter-spacing: 1px;
+line-height: 50px;
+position: relative;
+text-align: center;
+text-transform: uppercase;
+font-family: sans-serif;
+text-decoration: none;
+transition: .4s;
+width: 200px;
+}
+.btn-15 span {
+background: #1dce6c;
+display: block;
+height: 2px;
+position: absolute;
+right: 10px;
+top: 25px;
+transform: rotate(-45deg);
+transition: .275s;
+width: 15px;
+}
+.btn-15 span:nth-child(1) {
+right: -17px;
+transform: rotate(-180deg);
+}
+.btn-15 span:nth-child(2) {
+margin-top: 0;
+right: -2px;
+transform: rotate(180deg);
+}
+.btn-15:hover span {
+top: 28px;
+}
+.btn-15:hover span:nth-child(1) {
+right: 10px;
+transform: rotate(-45deg);
+}
+.btn-15:hover span:nth-child(2) {
+margin-left: 0px;
+margin-top: -10px;
+right: 10px;
+transform: rotate(45deg);
+transition: .35s;
+}
+</style>
+<!--/#blockui-css#-->
+
+</head>
+<body>
+
+<!--#blockui-html#-->
+<div class="container">
+
+    <div class="col-md-4 mt-20">
+    <button class="btn-12">Great hover animation</button>
+    </div>
+    <div class="col-md-4 mt-20">
+    <button data-hover="click me!" class="btn-13"><div>Hover me!</div></button>
+    </div>
+    <div class="col-md-4 mt-20">
+        <a href="#" class="btn-14">Learn More<span></span><span></span></a>
+    </div>
+
+    <div class="col-md-4 mt-20">
+        <a href="#" class="btn-15">Learn More<span></span><span></span></a>
+    </div>
+
+</div>
+<!--/#blockui-html#-->
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "boxed",
+  "description": "Boxed animated buttons",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "both",
+  "block": "button",
+  "tags": "button"
+}
