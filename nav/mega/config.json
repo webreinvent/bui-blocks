@@ -1,0 +1,10 @@
+{
+  "name": "mega",
+  "description": "This is mega menu",
+  "thumbnail": "thumbnail.jpg",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "both",
+  "block": "nav",
+  "tags": "nav, nav bar, navbar"
+}
