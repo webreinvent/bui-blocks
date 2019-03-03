@@ -1,0 +1,9 @@
+{
+  "name": "basic-colored",
+  "description": "Basic Solid Colored",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "frontend",
+  "block": "header",
+  "tags": "header, bootstrap"
+}
