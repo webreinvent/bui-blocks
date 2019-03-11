@@ -1,0 +1,40 @@
+$classes: ("default", "primary", "success", "info", "warning", "danger");
+
+$colors: (
+        default: #7F8C8D,
+        primary: #2980B9,
+        success: #16A085,
+        info: #8E44AD,
+        warning: #D35400,
+        danger: #C0392B,
+);
+
+$properties: (
+        m: "margin",
+        p: "padding",
+        b: "border",
+        fs: "font-size",
+        ls: "line-height",
+);
+
+$directions: (
+        t: "top",
+        r: "right",
+        b: "bottom",
+        l: "left",
+);
+
+$floatables: (
+        txt: "text",
+        img: "img",
+);
+
+$floats: (
+        l: "left",
+        r: "right",
+        c: "center",
+);
+
+$sizes: (1,2,3,4,5);
+
+$widthes: ("sm",'md','lg');

@@ -8,5 +8,28 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.3.1"
+  },
+  "scripts": {
+    "build:dev": "webpack",
+    "build:production": "cross-env NODE_ENV=production webpack",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/runtime-corejs2": "*",
+    "@wordpress/babel-preset-default": "*",
+    "autoprefixer": "*",
+    "babel-loader": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "extract-loader": "*",
+    "file-loader": "*",
+    "node-sass": "*",
+    "postcss-cli": "*",
+    "postcss-loader": "*",
+    "postcss-partial-import": "^4.1.0",
+    "sass-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*"
   }
 }

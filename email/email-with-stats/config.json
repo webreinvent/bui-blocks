@@ -1,0 +1,9 @@
+{
+  "name": "email-with-stats",
+  "description": "Email Template With Stats",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "frontend",
+  "block": "email",
+  "tags": "email, bootstrap"
+}
