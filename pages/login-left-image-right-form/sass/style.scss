@@ -1,0 +1,69 @@
+@import "vars";
+@import "math";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+  font-family: 'Montserrat', Verdana, sans-serif;
+  line-height: 25px;
+}
+
+/* reset */
+#outlook a {padding:0;}
+p {margin: 0; padding: 0; }
+
+
+/* general */
+img {display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;}
+a img {border: none;}
+a {text-decoration: none; color: #000001;} /* text link */
+a.phone {text-decoration: none; color: #000001 !important; pointer-events: auto; cursor: default;} /* phone link, use as wrapper on phone numbers */
+span {font-size: 13px; line-height: 17px; font-family: monospace; color: #000001;}
+
+/* table */
+table{
+  margin:0; padding:0; width:100%;
+  border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;
+}
+table td {border-collapse: collapse;}
+
+
+h1{font-size: 2rem;}
+h2{font-size: 1.8rem;}
+h3{font-size: 1.6rem;}
+h4{font-size: 1.4rem;}
+h5{font-size: 1.2rem;}
+h6{font-size: 1rem;}
+
+$multiplier: 5;
+$val: 0;
+
+@each $property_key, $property_value in $properties
+{
+  @for $i from 0 through 20
+  {
+
+    $val: multiply($i, $multiplier);
+
+    .#{$property_key}--#{$val}{
+        #{$property_value}: #{$val}px !important;;
+      }
+
+    @if $property_key == 'm'{
+
+      @each $direction_key, $direction_value in $directions
+      {
+
+        .#{$property_key}--#{$direction_key}-#{$val}
+        {
+
+          #{$property_value}-#{$direction_value}: #{$val}px !important;
+        }
+
+      }
+    }
+
+
+  }
+
+}

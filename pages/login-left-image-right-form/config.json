@@ -1,0 +1,9 @@
+{
+  "name": "login-left-image-right-form",
+  "description": "Login Form with image in left and form in right",
+  "framework": "bootstrap",
+  "trends": "flat",
+  "section": "frontend",
+  "block": "login",
+  "tags": "login, bootstrap"
+}
