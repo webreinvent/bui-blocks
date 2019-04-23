@@ -10,6 +10,41 @@
 </head>
 <body>
 
+<div class="bui-email--success">
+
+    <table>
+
+        <tr class="bui-container">
+
+            <td>
+
+                <table class="bui-email--md">
+                    <tr>
+                        <td>
+                            <table class="bui-row">
+
+                                <tr>
+                                    <td>
+                                        asdf
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </td>
+
+        </tr>
+
+
+    </table>
+
+</div>
+
+
 <?php
 $classes = ["default", "primary", "success", "info", "warning", "danger"];
 foreach($classes as $class)
@@ -90,6 +125,8 @@ foreach($classes as $class)
 <?php
 }
 ?>
+
+
 
 
 
